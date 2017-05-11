@@ -63,12 +63,17 @@ function welcome() {
 
 //Create a function called myName that returns your name
 
-
-
+function myName() {
+  return "Sydney";
+}
+console.log(myName());
 
 //Now save the function definition of myName into a new variable called newMyName
+function newMyName() {
+var newMyName = ('myName');
+}
+alert('newMyName');
 
-  //Code Here
 
 //Now alert the result of invoking newMyName
 
@@ -79,11 +84,15 @@ function welcome() {
 
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
+function outerFn() {
+  return function anonymous() {
+    return "myName";
+  };
 
-  //Code Here
-
+}
 //Now save the result of invoking outerFn into a variable called innerFn.
+var innerFn = outerFn();
 
-  //Code Here
 
 //Now invoke innerFn.
+innerFn();
